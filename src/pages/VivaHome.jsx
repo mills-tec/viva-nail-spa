@@ -12,15 +12,10 @@ import { Footer } from "../components/viva/Footer";
 import { Hero } from "../components/viva/Hero";
 import { useReveal } from "../components/useReveal";
 
-// Booksy URL — update with the salon's exact Booksy page if available
-const BOOKSY_URL = "https://booksy.com/en-us/s/viva+nail+and+spa+savannah";
-
 export default function VivaHome() {
   const rootRef = useReveal(".reveal");
   const [success, setSuccess] = useState({ open: false, data: null });
 
-  const openBooksy = () =>
-    window.open(BOOKSY_URL, "_blank", "noopener,noreferrer");
   const goSection = (id) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
